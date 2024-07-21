@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ModeToggle } from "./mode-toggle";
 import { Sidebar } from "./sidebar";
+import { Avatar } from "./avatar";
 
 const Navbar = () => {
   return (
@@ -10,10 +11,11 @@ const Navbar = () => {
       </div>
       <div className="flex flex-row items-center justify-end gap-3 p-3">
         <div className="hidden flex-row items-center justify-end gap-3 md:flex">
-          <p>public</p>
-          <p>protected</p>
-          <p>private</p>
+          <Link href={"/public"}>public</Link>
+          <Link href={"/protected"}>protected</Link>
+          <Link href="/private">private</Link>
           <ModeToggle />
+          <Avatar />
         </div>
         <div className="block md:hidden">
           <Sidebar />
