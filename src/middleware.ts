@@ -10,8 +10,8 @@ export async function middleware(request: NextRequest) {
 
   // Exclude the login page from being checked to avoid redirect loop
 
-  console.log("token===>", token);
-  console.log("pathname===>", request.nextUrl.pathname);
+  // console.log("token===>", token);
+  // console.log("pathname===>", request.nextUrl.pathname);
 
   if (!token) {
     return NextResponse.redirect(new URL("/auth/login", request.url));
