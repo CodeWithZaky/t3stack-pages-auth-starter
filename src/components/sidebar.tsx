@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/sheet";
 import { LuMenu } from "react-icons/lu";
 import { ModeToggle } from "./mode-toggle";
+import { LinkNav } from "./navbar";
 
 export function Sidebar() {
   return (

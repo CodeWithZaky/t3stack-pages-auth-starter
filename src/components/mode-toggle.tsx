@@ -1,9 +1,8 @@
 "use client";
 
-import * as React from "react";
-import { RxMoon } from "react-icons/rx";
-import { IoSunnyOutline } from "react-icons/io5";
 import { useTheme } from "next-themes";
+import { IoSunnyOutline } from "react-icons/io5";
+import { RxMoon } from "react-icons/rx";
 
 import { Button } from "@/components/ui/button";
 import {

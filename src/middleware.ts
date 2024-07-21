@@ -1,17 +1,17 @@
-import { type NextRequest, NextResponse } from "next/server";
-import { getToken } from "next-auth/jwt";
 import { env } from "@/env";
+import { getToken } from "next-auth/jwt";
+import { type NextRequest, NextResponse } from "next/server";
 
 export async function middleware(request: NextRequest) {
   const token = await getToken({
     req: request,
-    secret: String(env.NEXTAUTH_SECRET),
+    secret: env.NEXTAUTH_SECRET,
   });
 
   // Exclude the login page from being checked to avoid redirect loop
 
-  // console.log("token===>", token);
-  // console.log("pathname===>", request.nextUrl.pathname);
+  console.log("token===>", token);
+  console.log("pathname===>", request.nextUrl.pathname);
 
   if (!token) {
     return NextResponse.redirect(new URL("/auth/login", request.url));

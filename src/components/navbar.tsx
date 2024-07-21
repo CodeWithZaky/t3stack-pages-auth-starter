@@ -1,7 +1,22 @@
 import Link from "next/link";
+import { Avatar } from "./avatar";
 import { ModeToggle } from "./mode-toggle";
 import { Sidebar } from "./sidebar";
-import { Avatar } from "./avatar";
+
+export const LinkNav = [
+  {
+    name: "public",
+    href: "/public",
+  },
+  {
+    name: "protected",
+    href: "/protected",
+  },
+  {
+    name: "private",
+    href: "/private",
+  },
+];
 
 const Navbar = () => {
   return (
@@ -11,9 +26,11 @@ const Navbar = () => {
       </div>
       <div className="flex flex-row items-center justify-end gap-3 p-3">
         <div className="hidden flex-row items-center justify-end gap-3 md:flex">
-          <Link href={"/public"}>public</Link>
-          <Link href={"/protected"}>protected</Link>
-          <Link href="/private">private</Link>
+          {LinkNav.map((link) => (
+            <Link key={link.name} href={link.href}>
+              {link.name}
+            </Link>
+          ))}
           <ModeToggle />
           <Avatar />
         </div>

@@ -1,7 +1,7 @@
 import {
-  Avatar as AvatarPrimitive,
   AvatarFallback,
   AvatarImage,
+  Avatar as AvatarPrimitive,
 } from "@/components/ui/avatar";
 
 export function Avatar() {

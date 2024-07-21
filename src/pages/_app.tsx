@@ -5,10 +5,10 @@ import { type AppType } from "next/app";
 
 import { api } from "@/utils/api";
 
-import "@/styles/globals.css";
 import Navbar from "@/components/navbar";
-import clsx from "clsx";
 import { ThemeProvider } from "@/components/theme-provider";
+import "@/styles/globals.css";
+import clsx from "clsx";
 
 const MyApp: AppType<{ session: Session | null }> = ({
   Component,
