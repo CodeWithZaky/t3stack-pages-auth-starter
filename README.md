@@ -11,7 +11,6 @@ If you are not familiar with the different technologies used in this project, pl
 - [Next.js](https://nextjs.org)
 - [NextAuth.js](https://next-auth.js.org)
 - [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
 - [Tailwind CSS](https://tailwindcss.com)
 - [tRPC](https://trpc.io)
 
@@ -28,7 +27,7 @@ You can check out the [create-t3-app GitHub repository](https://github.com/t3-os
 
 Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
 
-## env file example
+# env file example
 
 Since the ".env" file is gitignored, you can use the ".env.example" file to
 build a new ".env" file when you clone the repo. Keep this file up-to-date
@@ -41,26 +40,24 @@ secrets in it. If you are cloning this repo, create a copy of this file named
 When adding additional environment variables, the schema in "/src/env.js"
 should be updated accordingly.
 
-Prisma
+## Prisma
+
 https://www.prisma.io/docs/reference/database-reference/connection-urls#env
 
 DATABASE_URL="postgresql://postgres:<password>@localhost:5432/<database_name>"
 
-Next Auth
+## Next-Auth
+
 You can generate a new secret on the command line with:
 openssl rand -base64 32
 https://next-auth.js.org/configuration/options#secret
-NEXTAUTH_SECRET=""
 
 NEXTAUTH_URL="http://localhost:3000"
+
 NEXTAUTH_SECRET=
 
-# Next Auth Discord Provider
-
-DISCORD_CLIENT_ID=""
-DISCORD_CLIENT_SECRET=""
-
-# Next Auth Google Provider
+## Next-Auth Google Provider
 
 GOOGLE_CLIENT_ID=""
+
 GOOGLE_CLIENT_SECRET=""
