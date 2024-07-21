@@ -50,6 +50,7 @@ export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(db) as Adapter,
   session: {
     strategy: "jwt",
+    maxAge: 60 * 60 * 24 * 7,
   },
   providers: [
     GoogleProvider({
