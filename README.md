@@ -1,63 +1,32 @@
-# Create T3 App
+# t3stack-pages-auth-starter
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+A starter template for building web applications with authentication using the T3 stack.
 
-## What's next? How do I make an app with this?
+## Getting Started
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+### Clone the repository and install dependencies:
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+- git clone https://github.com/CodeWithZaky/t3stack-pages-auth-starter.git
+- cd t3stack-pages-auth-starter
+- pnpm install
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+### Available Scripts
 
-## Learn More
+- dev: Start the development server.
+- build: Build the application for production.
+- start: Start the production server.
+- lint: Run ESLint.
+- db:generate: Generate Prisma migrations.
+- db:migrate: Deploy Prisma migrations.
+- db:push: Push Prisma schema state to the database.
+- db:studio: Open Prisma Studio for database management.
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+### Technologies
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+- Frontend: Next.js, Tailwind CSS, Radix UI
+- Backend: Prisma, tRPC, NextAuth.js
+- Utilities: TypeScript, ESLint, Prettier
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+### Package Manager
 
-## How do I deploy this?
-
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
-
-# env file example
-
-Since the ".env" file is gitignored, you can use the ".env.example" file to
-build a new ".env" file when you clone the repo. Keep this file up-to-date
-when you add new variables to `.env`.
-
-This file will be committed to version control, so make sure not to have any
-secrets in it. If you are cloning this repo, create a copy of this file named
-".env" and populate it with your secrets.
-
-When adding additional environment variables, the schema in "/src/env.js"
-should be updated accordingly.
-
-## Prisma
-
-https://www.prisma.io/docs/reference/database-reference/connection-urls#env
-
-DATABASE_URL="postgresql://postgres:<password>@localhost:5432/<database_name>"
-
-## Next-Auth
-
-You can generate a new secret on the command line with:
-openssl rand -base64 32
-https://next-auth.js.org/configuration/options#secret
-
-NEXTAUTH_URL="http://localhost:3000"
-
-NEXTAUTH_SECRET=
-
-## Next-Auth Google Provider
-
-GOOGLE_CLIENT_ID=""
-
-GOOGLE_CLIENT_SECRET=""
+- pnpm: ^9.6.0
