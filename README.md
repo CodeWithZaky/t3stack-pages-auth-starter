@@ -19,17 +19,41 @@ GOOGLE_CLIENT_SECRET=""
 
 ### Clone the repository and install dependencies:
 
+Clone the project
 ```bash
 git clone https://github.com/CodeWithZaky/t3stack-pages-auth-starter.git
 ```
+Go to the project directory
 ```bash
 cd t3stack-pages-auth-starter
 ```
+Install dependencies
 ```bash
 pnpm install
 ```
-
+Apply migrations to database
+```bash
+pnpm run db:generate
+```
+Start the server
+```bash
+pnpm run dev
+```
 ### Available Scripts
+
+```json
+"scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start",
+  "lint": "next lint",
+  "db:generate": "prisma migrate dev",
+  "db:migrate": "prisma migrate deploy",
+  "db:push": "prisma db push",
+  "db:studio": "prisma studio",
+  "postinstall": "prisma generate"
+},
+```
 
 - `dev`: Start the development server.
 - `build`: Build the application for production.
