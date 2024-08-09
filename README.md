@@ -4,11 +4,28 @@ A starter template for building web applications with authentication using the T
 
 ## Getting Started
 
+### Environment Variables
+To run this project, you will need to add the following environment variables to your .env file
+
+```bash
+DATABASE_URL="postgresql://postgres:<DB-PASSWORD>@localhost:<DB-PORT>/<DB-NAME>"
+
+NEXTAUTH_URL="http://localhost:3000"
+NEXTAUTH_SECRET="EXAMPLEa8s9c4eKgiEyTGL419dIGPE8ETDIybXsKwOQr7xoS9M03z"
+
+GOOGLE_CLIENT_ID=""
+GOOGLE_CLIENT_SECRET=""
+```
+
 ### Clone the repository and install dependencies:
 
 ```bash
 git clone https://github.com/CodeWithZaky/t3stack-pages-auth-starter.git
+```
+```bash
 cd t3stack-pages-auth-starter
+```
+```bash
 pnpm install
 ```
 
